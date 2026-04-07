@@ -1,0 +1,335 @@
+body{
+font-family:Poppins;
+margin:0;
+color:white;
+background:#020617;
+}
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:300px;
+
+background:linear-gradient(
+180deg,
+#1e293b,
+transparent
+);
+
+pointer-events:none;
+z-index:-1;
+
+}
+
+
+background-size:500% 500%;
+animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%;}
+25%{background-position:50% 100%;}
+50%{background-position:100% 50%;}
+75%{background-position:50% 0%;}
+100%{background-position:0% 50%;}
+
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+.logo{
+cursor:pointer;
+}
+
+/* cricket ball */
+
+#ball{
+position:fixed;
+top:80px;
+left:-80px;
+
+width:35px;
+height:35px;
+
+border:3px solid white;
+border-radius:50%;
+
+box-shadow:0 0 10px rgba(255,0,0,0.5);
+
+transition:transform 2s ease-out;
+}
+
+#ball::after{
+content:"";
+position:absolute;
+top:0;
+bottom:0;
+left:50%;
+
+width:3px;
+background:#ff4d4d;
+}
+
+/* seam line */
+
+#ball::after{
+content:"";
+position:absolute;
+top:0;
+bottom:0;
+left:50%;
+
+width:3px;
+background:white;
+}
+
+.fly{
+transform:translateX(120vw) translateY(-120px) rotate(720deg);
+}
+
+
+.big-title{
+font-size:70px;
+}
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#020617;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav li{
+margin-left:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#22c55e;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:140px 8% 80px;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+/* IMAGE */
+
+.hero-img img{
+width:360px;
+border-radius:50%;
+border:5px solid #22c55e;
+
+box-shadow:0 0 30px #22c55e;
+
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
+
+}
+
+/* BUTTON */
+
+.btn{
+background:#22c55e;
+color:black;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+margin-top:15px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+transform:translateY(-3px);
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 8%;
+}
+
+/* SKILLS */
+
+.skills-container{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.skill-box{
+flex:1;
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.skill-box:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.skills-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+}
+
+.skills-list span{
+background:#0f172a;
+padding:8px 15px;
+border-radius:20px;
+font-size:14px;
+border:1px solid #22c55e;
+}
+
+.skills-list span i{
+margin-right:6px;
+color:#22c55e;
+}
+
+/* PROJECTS */
+
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.project{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project img{
+width:100%;
+border-radius:8px;
+}
+
+.project:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.project-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#22c55e;
+color:black;
+border-radius:6px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.project-btn:hover{
+background:white;
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+#contact{
+text-align:center;
+}
+
+.contact-icons{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:30px 0;
+}
+
+.contact-icons a{
+font-size:35px;
+color:#22c55e;
+transition:0.3s;
+}
+
+.contact-icons a:hover{
+color:white;
+transform:scale(1.2);
+}
+
+.contact-form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:6px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-img img{
+margin-top:40px;
+}
+
+}
