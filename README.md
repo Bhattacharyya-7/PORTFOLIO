@@ -1,8 +1,5 @@
 # Debanjali Bhattacharjee – Portfolio
 
-## Run it
-Open `index.html` in a browser (double-click). No installs needed. To publish, drag this whole folder onto Netlify Drop (app.netlify.com/drop).
-
 ## Folder
 - `index.html` – page content (About, Skills, Experience, Education text)
 - `style.css` – colours (top of file, `:root`), fonts, layout
